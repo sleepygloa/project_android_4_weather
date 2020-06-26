@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "140408055237",
+    "firebase_url": "https://project-android-4-weather.firebaseio.com",
+    "project_id": "project-android-4-weather",
+    "storage_bucket": "project-android-4-weather.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:140408055237:android:8c3aae5deba91a5b1317ac",
+        "android_client_info": {
+          "package_name": "com.sleepygloa.weather1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "140408055237-d359fhl1rkleb8k3v93tckseohulsmab.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sleepygloa.weather1",
+            "certificate_hash": "f8a08cf8ee5d3a3ef734ed4499958400b568023f"
+          }
+        },
+        {
+          "client_id": "140408055237-qd0b7dgl16m98k13ncbl7s5d9b26mr86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH1Ty4Ffufzhd5TJ-fVKrKT_WopeZaNOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "140408055237-qd0b7dgl16m98k13ncbl7s5d9b26mr86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
