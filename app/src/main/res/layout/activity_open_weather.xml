@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OpenWeatherActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/loading_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="visible"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/main_icon"/>
+
+            <TextView
+                android:id="@+id/loading_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="로딩 중 ..."
+                android:textColor="#15161A"
+                android:textSize="16dp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/weather_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="현재 날씨"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:textColor="#03A9F4"
+                    />
+
+                <ImageView
+                    android:id="@+id/account_setting"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:src="@mipmap/setting_icon"
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="32dp"
+                android:background="#03A9F4"
+                />
+
+
+            <TextView
+                android:id="@+id/current_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#121010"
+                android:gravity="center"
+                android:text=""
+                android:textSize="40dp"
+                android:padding="32dp"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:id="@+id/current_icon"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="32dp"
+                android:layout_gravity="center_horizontal"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="최저 온도"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/current_min"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="30dp"
+                        android:text=""
+                        android:maxLines="1"
+                        android:textColor="#2196F3"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="현재 온도"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/current_now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="50dp"
+                        android:text=""
+                        android:maxLines="1"
+                        android:textColor="#FF9800"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="최고 온도"
+                        android:textColor="#000000"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/current_max"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="30dp"
+                        android:text=""
+                        android:maxLines="1"
+                        android:textColor="#F44336"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/current_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#605858"
+                android:gravity="center"
+                android:text=""
+                android:textSize="30dp"
+                android:padding="32dp"
+                />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
